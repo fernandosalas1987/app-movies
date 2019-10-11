@@ -66,4 +66,10 @@ class Movie {
     }
     return 'https://image.tmdb.org/t/p/w500/$posterPath';
   }
+  getBackgroundImg(){
+    if(posterPath==null){
+      return 'https://i1.wp.com/www.lagraderia.com/wp-content/uploads/2018/12/no-imagen.jpg?w=300';
+    }
+    return 'https://image.tmdb.org/t/p/w500/$backdropPath';
+  }
 }
