@@ -14,7 +14,7 @@ class MovieDetail extends StatelessWidget {
         _createAppbar(movie),
         SliverList(
           delegate: SliverChildListDelegate([
-            _posterTitulo(context, movie),
+            _titlePoster(context, movie),
             _description(movie),
             _description(movie),
             _description(movie),
@@ -39,14 +39,14 @@ class MovieDetail extends StatelessWidget {
         background: FadeInImage(
           image: NetworkImage(movie.getBackgroundImg()),
           placeholder: AssetImage('img/no-image.jpg'),
-          fadeInDuration: Duration(microseconds: 150),
+          fadeInDuration: Duration(milliseconds: 150),
           fit: BoxFit.cover,
         ),
       ),
     );
   }
 
-  Widget _posterTitulo(BuildContext context, Movie movie) {
+  Widget _titlePoster(BuildContext context, Movie movie) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
       child: Row(
