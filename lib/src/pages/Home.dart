@@ -1,4 +1,5 @@
 import 'package:app_peliculas/src/providers/MoviesProvider.dart';
+import 'package:app_peliculas/src/search/SearchDelegate.dart';
 import 'package:app_peliculas/src/widgets/CardSwiper.dart';
 import 'package:app_peliculas/src/widgets/MovieHorizontal.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,12 @@ class HomePage extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),
-            onPressed: () {},
+            onPressed: () {
+              showSearch(
+                context: context,
+                delegate: DataSearch(),
+              );
+            },
           )
         ],
       ),
